@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_85863a2656b9f2423ce80abe8d09f1e5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 170px;
+    background-color: white;
+    border: 2px solid gray;
+    z-index: 9999;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+    <b>Legenda Moda:</b><br>
+    <i style="background:red;width:10px;height:10px;display:inline-block;margin-right:5px;"></i> Road Transport<br>
+    <i style="background:green;width:10px;height:10px;display:inline-block;margin-right:5px;"></i> Train<br>
+    <i style="background:orange;width:10px;height:10px;display:inline-block;margin-right:5px;"></i> Airplane<br>
+    <i style="background:blue;width:10px;height:10px;display:inline-block;margin-right:5px;"></i> Ship<br>
+    <i style="background:gray;width:10px;height:10px;display:inline-block;margin-right:5px;"></i> Stationary
+</div>
+    
+            <div class="folium-map" id="map_85863a2656b9f2423ce80abe8d09f1e5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_85863a2656b9f2423ce80abe8d09f1e5 = L.map(
+                "map_85863a2656b9f2423ce80abe8d09f1e5",
+                {
+                    center: [-6.3057, 107.00868],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_174b2e81079097bd2b57d910167900b1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_174b2e81079097bd2b57d910167900b1.addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            var circle_marker_e3bc13e89377385bc1500c8b49df2a03 = L.circleMarker(
+                [-6.3057, 107.00868],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e3bc13e89377385bc1500c8b49df2a03.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 00:00:25.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_000ec536cb01783d5a2a254922fa7200 = L.circleMarker(
+                [-6.3057, 107.00868],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_000ec536cb01783d5a2a254922fa7200.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 00:00:36.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_581f380a9c5c2003f44da81992b6b952 = L.circleMarker(
+                [-6.3057, 107.00868],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_581f380a9c5c2003f44da81992b6b952.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 00:00:41.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9eb3700c0ad72774e52e67479bdbd79c = L.circleMarker(
+                [-6.3057, 107.00868],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_9eb3700c0ad72774e52e67479bdbd79c.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 00:15:57.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d32a49a28a6f62974992b3aa5179af0e = L.circleMarker(
+                [-6.30574, 107.00864],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d32a49a28a6f62974992b3aa5179af0e.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 01:01:10.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d181fca621f17e6e5a7dce6edf6f14c8 = L.circleMarker(
+                [-6.31001, 107.00902],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d181fca621f17e6e5a7dce6edf6f14c8.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 01:46:26.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41abd94be456f043a44d6d1127bf8de4 = L.circleMarker(
+                [-6.30588, 107.00888],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_41abd94be456f043a44d6d1127bf8de4.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 02:30:48.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4545933bdd03d1d364425c33cf4506cf = L.circleMarker(
+                [-6.30588, 107.00888],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_4545933bdd03d1d364425c33cf4506cf.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 03:30:50.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cd8e9f255b80e8d41d682485aa1b9f1 = L.circleMarker(
+                [-6.30588, 107.00888],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_2cd8e9f255b80e8d41d682485aa1b9f1.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 05:00:52.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7bd32bc24b022c0d6b553ea4555cfa3e = L.circleMarker(
+                [-6.29472, 106.99248],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_7bd32bc24b022c0d6b553ea4555cfa3e.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 07:56:48.645
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d638801604554f74d8ea0f03ceb711d = L.circleMarker(
+                [-6.29472, 106.99248],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_1d638801604554f74d8ea0f03ceb711d.bindTooltip(
+                `<div>
+                     Segmen 189<br>Moda: Tidak Bergerak<br>2022-06-25 07:58:30.286
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7e050279f7a0239ea5ecd57c064cd24 = L.circleMarker(
+                [-6.28605, 106.98745],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_f7e050279f7a0239ea5ecd57c064cd24.bindTooltip(
+                `<div>
+                     Segmen 191<br>Moda: Angkutan Darat<br>2022-06-25 07:58:59.988
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c154666c06c94ef046a2d071d6f7136 = L.circleMarker(
+                [-6.28724, 106.98682],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_1c154666c06c94ef046a2d071d6f7136.bindTooltip(
+                `<div>
+                     Segmen 191<br>Moda: Angkutan Darat<br>2022-06-25 08:00:19.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ee6c878154382833edf5004ca65e2e7 = L.circleMarker(
+                [-6.22845, 106.98389],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_5ee6c878154382833edf5004ca65e2e7.bindTooltip(
+                `<div>
+                     Segmen 193<br>Moda: Angkutan Darat<br>2022-06-25 08:15:03.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c531c893ccc3ecb3b3806550d171919 = L.circleMarker(
+                [-6.22845, 106.98389],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_5c531c893ccc3ecb3b3806550d171919.bindTooltip(
+                `<div>
+                     Segmen 193<br>Moda: Angkutan Darat<br>2022-06-25 08:15:11.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d7321f152e7c0214251fea912dbf95f = L.circleMarker(
+                [-6.22845, 106.98389],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_5d7321f152e7c0214251fea912dbf95f.bindTooltip(
+                `<div>
+                     Segmen 193<br>Moda: Angkutan Darat<br>2022-06-25 08:15:20.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_530b39e7f71ac597f125326f3bfbda2c = L.circleMarker(
+                [-6.23034, 106.98409],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_530b39e7f71ac597f125326f3bfbda2c.bindTooltip(
+                `<div>
+                     Segmen 193<br>Moda: Angkutan Darat<br>2022-06-25 08:15:43.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a4139c9e35b81374303f95ab7cf4a13 = L.circleMarker(
+                [-6.21361, 106.98356],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_6a4139c9e35b81374303f95ab7cf4a13.bindTooltip(
+                `<div>
+                     Segmen 194<br>Moda: Tidak Bergerak<br>2022-06-25 08:30:39.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76680da03e1e1b82c8c6867c8395db17 = L.circleMarker(
+                [-6.2135, 106.98261],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_76680da03e1e1b82c8c6867c8395db17.bindTooltip(
+                `<div>
+                     Segmen 194<br>Moda: Tidak Bergerak<br>2022-06-25 08:45:03.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31a7eaebe77b02fc882b97ccc9e15539 = L.circleMarker(
+                [-6.2135, 106.98261],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_31a7eaebe77b02fc882b97ccc9e15539.bindTooltip(
+                `<div>
+                     Segmen 194<br>Moda: Tidak Bergerak<br>2022-06-25 08:45:14.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1bae2d3373d287d062b91d25951935c = L.circleMarker(
+                [-6.18298, 106.93105],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_b1bae2d3373d287d062b91d25951935c.bindTooltip(
+                `<div>
+                     Segmen 195<br>Moda: Angkutan Darat<br>2022-06-25 09:00:29.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b176a3b6fa3f9efb0b15401b67d20a3d = L.circleMarker(
+                [-6.17488, 106.84977],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_b176a3b6fa3f9efb0b15401b67d20a3d.bindTooltip(
+                `<div>
+                     Segmen 195<br>Moda: Angkutan Darat<br>2022-06-25 09:15:32.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_34f12c73f0cc9ee3765ad735ce8c8905 = L.circleMarker(
+                [-6.16579, 106.83748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_34f12c73f0cc9ee3765ad735ce8c8905.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 09:45:23.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f44ad9e165d6b1484909a81cc1440db = L.circleMarker(
+                [-6.16579, 106.83748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_3f44ad9e165d6b1484909a81cc1440db.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 10:00:14.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14d4fc3e1e960ff86d096ad5c58bca64 = L.circleMarker(
+                [-6.16579, 106.83748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_14d4fc3e1e960ff86d096ad5c58bca64.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 10:15:08.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39e1038b3b83ff5ee72f58ae2cc60666 = L.circleMarker(
+                [-6.16579, 106.83748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_39e1038b3b83ff5ee72f58ae2cc60666.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 10:15:39.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac217cb8ea27a8a1044b8285cedb40b7 = L.circleMarker(
+                [-6.16579, 106.83748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ac217cb8ea27a8a1044b8285cedb40b7.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 10:15:53.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5adddb083a85f4d65f2262875eb7f5a5 = L.circleMarker(
+                [-6.16569, 106.83742],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_5adddb083a85f4d65f2262875eb7f5a5.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 10:30:11.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_139010856546197120ebca93fbb06a8f = L.circleMarker(
+                [-6.16603, 106.83231],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_139010856546197120ebca93fbb06a8f.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:00:12.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_595a1c0c29e72dc851a5d1cfc3e2f4bb = L.circleMarker(
+                [-6.16683, 106.83641],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_595a1c0c29e72dc851a5d1cfc3e2f4bb.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:15:02.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed3345b4d638c5bdfe70ae714a517c55 = L.circleMarker(
+                [-6.16693, 106.83643],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ed3345b4d638c5bdfe70ae714a517c55.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:15:23.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0db37f9c04418557ba69c172f77fa1a = L.circleMarker(
+                [-6.16683, 106.83641],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e0db37f9c04418557ba69c172f77fa1a.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:15:45.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c01029fbb829a6d40c5825aa1dc58acb = L.circleMarker(
+                [-6.16693, 106.83643],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c01029fbb829a6d40c5825aa1dc58acb.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:30:07.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a68c5446de3dc9148456033919809f8 = L.circleMarker(
+                [-6.16693, 106.83643],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_7a68c5446de3dc9148456033919809f8.bindTooltip(
+                `<div>
+                     Segmen 196<br>Moda: Tidak Bergerak<br>2022-06-25 11:30:29.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e04581a0c64c7be0d96d44efa0637a35 = L.circleMarker(
+                [-6.16396, 106.83593],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e04581a0c64c7be0d96d44efa0637a35.bindTooltip(
+                `<div>
+                     Segmen 197<br>Moda: Tidak Bergerak<br>2022-06-25 11:45:13.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c35fcb0f522e2293d86a92efb5c6b0ee = L.circleMarker(
+                [-6.16382, 106.83627],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c35fcb0f522e2293d86a92efb5c6b0ee.bindTooltip(
+                `<div>
+                     Segmen 197<br>Moda: Tidak Bergerak<br>2022-06-25 11:45:35.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66b68fc059f3508d01f80b709c78b436 = L.circleMarker(
+                [-6.1664, 106.83632],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_66b68fc059f3508d01f80b709c78b436.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:00:51.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c10666943fa5302c314e7e4acd2d20f8 = L.circleMarker(
+                [-6.16682, 106.83662],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c10666943fa5302c314e7e4acd2d20f8.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:15:16.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4dd32ad6fba63e9fe9bc7199512f72c = L.circleMarker(
+                [-6.16649, 106.8363],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e4dd32ad6fba63e9fe9bc7199512f72c.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:30:13.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_67289f7a854eda8ca72b876cc755d0ba = L.circleMarker(
+                [-6.1668, 106.8366],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_67289f7a854eda8ca72b876cc755d0ba.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:30:40.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d87f0e1dce204bf0469d1c3af378d3e3 = L.circleMarker(
+                [-6.16682, 106.83662],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d87f0e1dce204bf0469d1c3af378d3e3.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:30:47.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecf42040be28bbf822a783c2e6b96844 = L.circleMarker(
+                [-6.16502, 106.83771],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ecf42040be28bbf822a783c2e6b96844.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 12:45:09.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0d4c7eb7eaa58fcca140a2ff60510e9 = L.circleMarker(
+                [-6.16502, 106.83771],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_f0d4c7eb7eaa58fcca140a2ff60510e9.bindTooltip(
+                `<div>
+                     Segmen 198<br>Moda: Tidak Bergerak<br>2022-06-25 13:00:46.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_767fc6ed248ac52c29bf3ee7f53ba43f = L.circleMarker(
+                [-6.16507, 106.83779],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_767fc6ed248ac52c29bf3ee7f53ba43f.bindTooltip(
+                `<div>
+                     Segmen 199<br>Moda: Tidak Bergerak<br>2022-06-25 13:15:24.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64f280196d28e4cfb86b6a0c6c47603b = L.circleMarker(
+                [-6.16502, 106.83771],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_64f280196d28e4cfb86b6a0c6c47603b.bindTooltip(
+                `<div>
+                     Segmen 199<br>Moda: Tidak Bergerak<br>2022-06-25 13:15:40.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_494d2dfe2259e8bfe31b27248086bc85 = L.circleMarker(
+                [-6.16561, 106.83903],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_494d2dfe2259e8bfe31b27248086bc85.bindTooltip(
+                `<div>
+                     Segmen 200<br>Moda: Tidak Bergerak<br>2022-06-25 13:30:22.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81ba30450cbd22a3fdcd52b1e7e24ca3 = L.circleMarker(
+                [-6.16561, 106.83903],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_81ba30450cbd22a3fdcd52b1e7e24ca3.bindTooltip(
+                `<div>
+                     Segmen 200<br>Moda: Tidak Bergerak<br>2022-06-25 13:45:31.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6245dd7d9f5b8f479ebe39d8f3fbd0f = L.circleMarker(
+                [-6.16489, 106.83689],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_a6245dd7d9f5b8f479ebe39d8f3fbd0f.bindTooltip(
+                `<div>
+                     Segmen 201<br>Moda: Tidak Bergerak<br>2022-06-25 14:00:13.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_689522c52b261f7305ec6e24ab08cc67 = L.circleMarker(
+                [-6.16541, 106.83554],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_689522c52b261f7305ec6e24ab08cc67.bindTooltip(
+                `<div>
+                     Segmen 202<br>Moda: Tidak Bergerak<br>2022-06-25 14:15:41.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64ef1c8f5059e4b229e6c64b967b61c6 = L.circleMarker(
+                [-6.16511, 106.83891],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_64ef1c8f5059e4b229e6c64b967b61c6.bindTooltip(
+                `<div>
+                     Segmen 202<br>Moda: Tidak Bergerak<br>2022-06-25 14:30:29.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b77ea506014de3c41c0aaf03df1f475d = L.circleMarker(
+                [-6.16511, 106.83891],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_b77ea506014de3c41c0aaf03df1f475d.bindTooltip(
+                `<div>
+                     Segmen 202<br>Moda: Tidak Bergerak<br>2022-06-25 14:30:31.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aae02599a06f4d426207e88410fc3b46 = L.circleMarker(
+                [-6.16508, 106.84152],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_aae02599a06f4d426207e88410fc3b46.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 14:38:51.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c21e8e49160c92b9b38393b7519f4c15 = L.circleMarker(
+                [-6.17024, 106.86074],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c21e8e49160c92b9b38393b7519f4c15.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 14:45:07.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49a349851baa0a04f6567963cd384327 = L.circleMarker(
+                [-6.17334, 106.85854],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_49a349851baa0a04f6567963cd384327.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 14:45:23.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b874d2212c85f34ec3d80733dfca217 = L.circleMarker(
+                [-6.17325, 106.85931],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_3b874d2212c85f34ec3d80733dfca217.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 14:45:25.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6fec82922bd443aa9984990432151e01 = L.circleMarker(
+                [-6.1828, 106.93686],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_6fec82922bd443aa9984990432151e01.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:00:10.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e50ef92cf5e022f7c35e225531c57178 = L.circleMarker(
+                [-6.1828, 106.93686],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e50ef92cf5e022f7c35e225531c57178.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:00:26.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e25da5200bf44e209f50310ac02d7d0c = L.circleMarker(
+                [-6.1828, 106.93686],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e25da5200bf44e209f50310ac02d7d0c.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:00:36.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36c3c4bc4694759d5edd418bd45e105a = L.circleMarker(
+                [-6.19199, 106.974],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_36c3c4bc4694759d5edd418bd45e105a.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:15:17.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08a2824e31f7a21823a9d17b4060dc9b = L.circleMarker(
+                [-6.21017, 106.97847],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_08a2824e31f7a21823a9d17b4060dc9b.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:19:54.638
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e292ed80550a4f5eb78d6c74cbe13654 = L.circleMarker(
+                [-6.21017, 106.97847],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e292ed80550a4f5eb78d6c74cbe13654.bindTooltip(
+                `<div>
+                     Segmen 203<br>Moda: Angkutan Darat<br>2022-06-25 15:19:58.110
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e71159cd1b0e6dd6027443ac27fd3e6 = L.circleMarker(
+                [-6.21235, 106.98164],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_2e71159cd1b0e6dd6027443ac27fd3e6.bindTooltip(
+                `<div>
+                     Segmen 204<br>Moda: Kereta Api<br>2022-06-25 15:20:19.039
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98c97b883c8a7fce959d51f54a810f12 = L.circleMarker(
+                [-6.21235, 106.98164],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_98c97b883c8a7fce959d51f54a810f12.bindTooltip(
+                `<div>
+                     Segmen 205<br>Moda: Tidak Bergerak<br>2022-06-25 15:20:25.496
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27ce364e660ddad1267e3e6fd665419d = L.circleMarker(
+                [-6.21233, 106.98163],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_27ce364e660ddad1267e3e6fd665419d.bindTooltip(
+                `<div>
+                     Segmen 205<br>Moda: Tidak Bergerak<br>2022-06-25 15:20:44.405
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7faa8ddd6c9872746141b6eca8fbcc1 = L.circleMarker(
+                [-6.21157, 106.98115],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d7faa8ddd6c9872746141b6eca8fbcc1.bindTooltip(
+                `<div>
+                     Segmen 205<br>Moda: Tidak Bergerak<br>2022-06-25 15:30:21.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4355d59a110054729291dc4ce5cd39c = L.circleMarker(
+                [-6.21157, 106.98115],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_f4355d59a110054729291dc4ce5cd39c.bindTooltip(
+                `<div>
+                     Segmen 205<br>Moda: Tidak Bergerak<br>2022-06-25 15:30:32.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dc063087bde41b799e9ad9cf9272d62 = L.circleMarker(
+                [-6.22109, 106.98361],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_2dc063087bde41b799e9ad9cf9272d62.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:06.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b8fbadde76a3a9672c1a10f90e0aadf = L.circleMarker(
+                [-6.22109, 106.98361],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_4b8fbadde76a3a9672c1a10f90e0aadf.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:22.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a23e081a465d0feb73b6e3807995f0e0 = L.circleMarker(
+                [-6.22263, 106.98179],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_a23e081a465d0feb73b6e3807995f0e0.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:32.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac2f972e50523c8c4428c425201dfc70 = L.circleMarker(
+                [-6.22215, 106.98039],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ac2f972e50523c8c4428c425201dfc70.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:34.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d356c4b77a3c55472db3653334f0f5fe = L.circleMarker(
+                [-6.22367, 106.98228],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d356c4b77a3c55472db3653334f0f5fe.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:48.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5b67f1c91cd040d9f277dbe52ea55e = L.circleMarker(
+                [-6.22367, 106.98228],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_8d5b67f1c91cd040d9f277dbe52ea55e.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 15:45:54.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa1cbc550362faa00b012f4a0069b86c = L.circleMarker(
+                [-6.26563, 106.99333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_fa1cbc550362faa00b012f4a0069b86c.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 16:00:15.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea7b1ce63a04f35af6539157b694fa5b = L.circleMarker(
+                [-6.26705, 106.9933],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ea7b1ce63a04f35af6539157b694fa5b.bindTooltip(
+                `<div>
+                     Segmen 206<br>Moda: Angkutan Darat<br>2022-06-25 16:00:32.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_971a85599e28d4578b5a6ab6d09222d7 = L.circleMarker(
+                [-6.30201, 107.00637],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_971a85599e28d4578b5a6ab6d09222d7.bindTooltip(
+                `<div>
+                     Segmen 207<br>Moda: Tidak Bergerak<br>2022-06-25 16:45:31.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97b4dff055bd4ba769fe9e87d970b0fc = L.circleMarker(
+                [-6.29869, 107.00855],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_97b4dff055bd4ba769fe9e87d970b0fc.bindTooltip(
+                `<div>
+                     Segmen 207<br>Moda: Tidak Bergerak<br>2022-06-25 17:15:05.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a75c149bff5e5beb44b75a265bb345f6 = L.circleMarker(
+                [-6.30583, 107.00859],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_a75c149bff5e5beb44b75a265bb345f6.bindTooltip(
+                `<div>
+                     Segmen 207<br>Moda: Tidak Bergerak<br>2022-06-25 17:30:33.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a660ac620d05ee24fc5f7c97087b4039 = L.circleMarker(
+                [-6.30614, 107.00784],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_a660ac620d05ee24fc5f7c97087b4039.bindTooltip(
+                `<div>
+                     Segmen 207<br>Moda: Tidak Bergerak<br>2022-06-25 17:45:11.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8634249b6ef2d2489f2fa97f77f68839 = L.circleMarker(
+                [-6.30583, 107.00859],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_8634249b6ef2d2489f2fa97f77f68839.bindTooltip(
+                `<div>
+                     Segmen 208<br>Moda: Angkutan Darat<br>2022-06-25 17:45:21.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_052923740b6a1e1d2830f08b740a514b = L.circleMarker(
+                [-6.30583, 107.00859],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_052923740b6a1e1d2830f08b740a514b.bindTooltip(
+                `<div>
+                     Segmen 208<br>Moda: Angkutan Darat<br>2022-06-25 17:45:42.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5be70d1cc7b997a11d7d2df5bd1803e9 = L.circleMarker(
+                [-6.31697, 107.0072],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_5be70d1cc7b997a11d7d2df5bd1803e9.bindTooltip(
+                `<div>
+                     Segmen 208<br>Moda: Angkutan Darat<br>2022-06-25 18:00:23.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_520209b188fba07148e59b1d6932e6ca = L.circleMarker(
+                [-6.34966, 106.99749],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_520209b188fba07148e59b1d6932e6ca.bindTooltip(
+                `<div>
+                     Segmen 208<br>Moda: Angkutan Darat<br>2022-06-25 18:15:13.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e636a2dfdb0b4124e7ac54cec9c1a195 = L.circleMarker(
+                [-6.34988, 106.99965],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_e636a2dfdb0b4124e7ac54cec9c1a195.bindTooltip(
+                `<div>
+                     Segmen 208<br>Moda: Angkutan Darat<br>2022-06-25 18:15:23.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc670c16b3e1636fc6b0632a1a6c6898 = L.circleMarker(
+                [-6.36899, 107.00921],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_cc670c16b3e1636fc6b0632a1a6c6898.bindTooltip(
+                `<div>
+                     Segmen 210<br>Moda: Tidak Bergerak<br>2022-06-25 18:28:49.913
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7f9c7fe5261339ebbe99c35fb492a60 = L.circleMarker(
+                [-6.37367, 107.00554],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c7f9c7fe5261339ebbe99c35fb492a60.bindTooltip(
+                `<div>
+                     Segmen 211<br>Moda: Tidak Bergerak<br>2022-06-25 18:29:15.214
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b98c1da37389473be991543670779442 = L.circleMarker(
+                [-6.37367, 107.00554],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_b98c1da37389473be991543670779442.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 18:29:19.336
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8fb4f820aca143460f5db50baa67f078 = L.circleMarker(
+                [-6.37367, 107.00554],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_8fb4f820aca143460f5db50baa67f078.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 18:29:23.652
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_320373d97b1023653427f5397f0bf1ef = L.circleMarker(
+                [-6.37261, 107.00486],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_320373d97b1023653427f5397f0bf1ef.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 18:45:20.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c6312c6e4b7d2d1cd14b058bceba4fe6 = L.circleMarker(
+                [-6.37253, 107.00424],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_c6312c6e4b7d2d1cd14b058bceba4fe6.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:00:06.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0682ec8890fcdc8de50ef55de92eb4bd = L.circleMarker(
+                [-6.37305, 107.00495],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_0682ec8890fcdc8de50ef55de92eb4bd.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:00:17.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dea5bdd0d720c1565d5615c6241fe1e3 = L.circleMarker(
+                [-6.37305, 107.00495],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_dea5bdd0d720c1565d5615c6241fe1e3.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:00:18.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_930678b3b39f614545d4a929a1f10ef6 = L.circleMarker(
+                [-6.37305, 107.00495],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_930678b3b39f614545d4a929a1f10ef6.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:15:15.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2d9501fd65354fd4d858c2d83a19511 = L.circleMarker(
+                [-6.37305, 107.00495],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_a2d9501fd65354fd4d858c2d83a19511.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:15:16.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_142342687288963ed125be3ba8a4b0a8 = L.circleMarker(
+                [-6.37225, 107.0041],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_142342687288963ed125be3ba8a4b0a8.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:30:30.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4ea024fbc6529b9e06fd25faff75bc9 = L.circleMarker(
+                [-6.37513, 107.00005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_d4ea024fbc6529b9e06fd25faff75bc9.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 19:45:09.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c8745d2ad848b19fd99f6aedfd461b4 = L.circleMarker(
+                [-6.37315, 107.00425],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_8c8745d2ad848b19fd99f6aedfd461b4.bindTooltip(
+                `<div>
+                     Segmen 212<br>Moda: Tidak Bergerak<br>2022-06-25 20:00:16.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de262160621bccd47fc5dfc35662600f = L.circleMarker(
+                [-6.3693, 107.00901],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_de262160621bccd47fc5dfc35662600f.bindTooltip(
+                `<div>
+                     Segmen 213<br>Moda: Angkutan Darat<br>2022-06-25 20:15:05.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a6426a5e1ff609619d83e514ad54eae = L.circleMarker(
+                [-6.35832, 107.01718],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_7a6426a5e1ff609619d83e514ad54eae.bindTooltip(
+                `<div>
+                     Segmen 213<br>Moda: Angkutan Darat<br>2022-06-25 20:15:41.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b60ff134ccc3431dca8d1df1aa97bee6 = L.circleMarker(
+                [-6.29658, 107.021],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_b60ff134ccc3431dca8d1df1aa97bee6.bindTooltip(
+                `<div>
+                     Segmen 213<br>Moda: Angkutan Darat<br>2022-06-25 20:45:05.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6420eb04a8cd1cb298fc5737dd1a1eb4 = L.circleMarker(
+                [-6.30262, 107.0163],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_6420eb04a8cd1cb298fc5737dd1a1eb4.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 21:15:11.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f38d5e9d8f59747b5ecfdf0d7a1bef2f = L.circleMarker(
+                [-6.30591, 107.00851],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_f38d5e9d8f59747b5ecfdf0d7a1bef2f.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 22:00:16.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_472ede7e0da1a6248d374f5bac084ca5 = L.circleMarker(
+                [-6.31441, 107.00593],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_472ede7e0da1a6248d374f5bac084ca5.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 22:15:15.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b9dbfd0bac6328ca52fd31f670cdfda = L.circleMarker(
+                [-6.30697, 107.01017],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_6b9dbfd0bac6328ca52fd31f670cdfda.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 22:45:27.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddd2528b89a04961b36bde10fb1d7efa = L.circleMarker(
+                [-6.30935, 107.0096],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_ddd2528b89a04961b36bde10fb1d7efa.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 23:15:49.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_35df944732e44089d8eacc05e1322fbc = L.circleMarker(
+                [-6.30548, 107.00811],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            circle_marker_35df944732e44089d8eacc05e1322fbc.bindTooltip(
+                `<div>
+                     Segmen 214<br>Moda: Tidak Bergerak<br>2022-06-25 23:30:32.000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_73f7cdd8b3f36f4c9c8d1d58cc489342 = L.polyline(
+                [[-6.3057, 107.00868], [-6.3057, 107.00868], [-6.3057, 107.00868], [-6.3057, 107.00868], [-6.30574, 107.00864], [-6.31001, 107.00902], [-6.30588, 107.00888], [-6.30588, 107.00888], [-6.30588, 107.00888], [-6.29472, 106.99248], [-6.29472, 106.99248]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_73f7cdd8b3f36f4c9c8d1d58cc489342.bindTooltip(
+                `<div>
+                     Segmen 189 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7388da6d0cc781509fc9bf48ba6b01e0 = L.polyline(
+                [[-6.28605, 106.98745], [-6.28724, 106.98682]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_7388da6d0cc781509fc9bf48ba6b01e0.bindTooltip(
+                `<div>
+                     Segmen 191 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_162189531356b0455a53eeb1be22c993 = L.polyline(
+                [[-6.22845, 106.98389], [-6.22845, 106.98389], [-6.22845, 106.98389], [-6.23034, 106.98409]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_162189531356b0455a53eeb1be22c993.bindTooltip(
+                `<div>
+                     Segmen 193 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_06c646cd759015fb63749f9d44e50416 = L.polyline(
+                [[-6.21361, 106.98356], [-6.2135, 106.98261], [-6.2135, 106.98261]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_06c646cd759015fb63749f9d44e50416.bindTooltip(
+                `<div>
+                     Segmen 194 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_34731c11a97433690dc2251a04c11b3f = L.polyline(
+                [[-6.18298, 106.93105], [-6.17488, 106.84977]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_34731c11a97433690dc2251a04c11b3f.bindTooltip(
+                `<div>
+                     Segmen 195 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8ae7fbd630e6e6ded1e5085392638fe2 = L.polyline(
+                [[-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16569, 106.83742], [-6.16603, 106.83231], [-6.16683, 106.83641], [-6.16693, 106.83643], [-6.16683, 106.83641], [-6.16693, 106.83643], [-6.16693, 106.83643]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_8ae7fbd630e6e6ded1e5085392638fe2.bindTooltip(
+                `<div>
+                     Segmen 196 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_80ef464188641da0b1dee15760bfcf57 = L.polyline(
+                [[-6.16396, 106.83593], [-6.16382, 106.83627]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_80ef464188641da0b1dee15760bfcf57.bindTooltip(
+                `<div>
+                     Segmen 197 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0b5d9cab56c37e32f9b8438c14e89c02 = L.polyline(
+                [[-6.1664, 106.83632], [-6.16682, 106.83662], [-6.16649, 106.8363], [-6.1668, 106.8366], [-6.16682, 106.83662], [-6.16502, 106.83771], [-6.16502, 106.83771]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_0b5d9cab56c37e32f9b8438c14e89c02.bindTooltip(
+                `<div>
+                     Segmen 198 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_729bb20d385890ce988dc5fc24d8594e = L.polyline(
+                [[-6.16507, 106.83779], [-6.16502, 106.83771]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_729bb20d385890ce988dc5fc24d8594e.bindTooltip(
+                `<div>
+                     Segmen 199 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0a85db0e19f1908dbc8cddb7af025f39 = L.polyline(
+                [[-6.16561, 106.83903], [-6.16561, 106.83903]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_0a85db0e19f1908dbc8cddb7af025f39.bindTooltip(
+                `<div>
+                     Segmen 200 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4b012d7798f1dedb331a382cd1610b3f = L.polyline(
+                [[-6.16541, 106.83554], [-6.16511, 106.83891], [-6.16511, 106.83891]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_4b012d7798f1dedb331a382cd1610b3f.bindTooltip(
+                `<div>
+                     Segmen 202 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_27732908e682827f9a7d37c4fbb02966 = L.polyline(
+                [[-6.16508, 106.84152], [-6.17024, 106.86074], [-6.17334, 106.85854], [-6.17325, 106.85931], [-6.1828, 106.93686], [-6.1828, 106.93686], [-6.1828, 106.93686], [-6.19199, 106.974], [-6.21017, 106.97847], [-6.21017, 106.97847]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_27732908e682827f9a7d37c4fbb02966.bindTooltip(
+                `<div>
+                     Segmen 203 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2e7b7e3e9b408f63ce4def23dd57afed = L.polyline(
+                [[-6.21235, 106.98164], [-6.21233, 106.98163], [-6.21157, 106.98115], [-6.21157, 106.98115]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_2e7b7e3e9b408f63ce4def23dd57afed.bindTooltip(
+                `<div>
+                     Segmen 205 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f518fa144f929742c8cfc0dc506745f7 = L.polyline(
+                [[-6.22109, 106.98361], [-6.22109, 106.98361], [-6.22263, 106.98179], [-6.22215, 106.98039], [-6.22367, 106.98228], [-6.22367, 106.98228], [-6.26563, 106.99333], [-6.26705, 106.9933]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_f518fa144f929742c8cfc0dc506745f7.bindTooltip(
+                `<div>
+                     Segmen 206 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ccc7369394c29071865405c24e77b437 = L.polyline(
+                [[-6.30201, 107.00637], [-6.29869, 107.00855], [-6.30583, 107.00859], [-6.30614, 107.00784]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_ccc7369394c29071865405c24e77b437.bindTooltip(
+                `<div>
+                     Segmen 207 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4f32ae57436d35e71a0ee75d0acea6d9 = L.polyline(
+                [[-6.30583, 107.00859], [-6.30583, 107.00859], [-6.31697, 107.0072], [-6.34966, 106.99749], [-6.34988, 106.99965]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_4f32ae57436d35e71a0ee75d0acea6d9.bindTooltip(
+                `<div>
+                     Segmen 208 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d65a255e1f2e8e153c01839a215f2ee4 = L.polyline(
+                [[-6.37367, 107.00554], [-6.37367, 107.00554], [-6.37261, 107.00486], [-6.37253, 107.00424], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37225, 107.0041], [-6.37513, 107.00005], [-6.37315, 107.00425]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_d65a255e1f2e8e153c01839a215f2ee4.bindTooltip(
+                `<div>
+                     Segmen 212 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8047ab9a5f9ea1a851e793f3e46e4f06 = L.polyline(
+                [[-6.3693, 107.00901], [-6.35832, 107.01718], [-6.29658, 107.021]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_8047ab9a5f9ea1a851e793f3e46e4f06.bindTooltip(
+                `<div>
+                     Segmen 213 - Moda: Angkutan Darat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_15b24a275f83fc53beb5883752a76902 = L.polyline(
+                [[-6.30262, 107.0163], [-6.30591, 107.00851], [-6.31441, 107.00593], [-6.30697, 107.01017], [-6.30935, 107.0096], [-6.30548, 107.00811]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_15b24a275f83fc53beb5883752a76902.bindTooltip(
+                `<div>
+                     Segmen 214 - Moda: Tidak Bergerak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_18310834f63c78bc464b51af7d60ad5d = L.polyline(
+                [[-6.3057, 107.00868], [-6.3057, 107.00868], [-6.3057, 107.00868], [-6.3057, 107.00868], [-6.30574, 107.00864], [-6.31001, 107.00902], [-6.30588, 107.00888], [-6.30588, 107.00888], [-6.30588, 107.00888], [-6.29472, 106.99248], [-6.29472, 106.99248], [-6.28605, 106.98745], [-6.28724, 106.98682], [-6.22845, 106.98389], [-6.22845, 106.98389], [-6.22845, 106.98389], [-6.23034, 106.98409], [-6.21361, 106.98356], [-6.2135, 106.98261], [-6.2135, 106.98261], [-6.18298, 106.93105], [-6.17488, 106.84977], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16579, 106.83748], [-6.16569, 106.83742], [-6.16603, 106.83231], [-6.16683, 106.83641], [-6.16693, 106.83643], [-6.16683, 106.83641], [-6.16693, 106.83643], [-6.16693, 106.83643], [-6.16396, 106.83593], [-6.16382, 106.83627], [-6.1664, 106.83632], [-6.16682, 106.83662], [-6.16649, 106.8363], [-6.1668, 106.8366], [-6.16682, 106.83662], [-6.16502, 106.83771], [-6.16502, 106.83771], [-6.16507, 106.83779], [-6.16502, 106.83771], [-6.16561, 106.83903], [-6.16561, 106.83903], [-6.16489, 106.83689], [-6.16541, 106.83554], [-6.16511, 106.83891], [-6.16511, 106.83891], [-6.16508, 106.84152], [-6.17024, 106.86074], [-6.17334, 106.85854], [-6.17325, 106.85931], [-6.1828, 106.93686], [-6.1828, 106.93686], [-6.1828, 106.93686], [-6.19199, 106.974], [-6.21017, 106.97847], [-6.21017, 106.97847], [-6.21235, 106.98164], [-6.21235, 106.98164], [-6.21233, 106.98163], [-6.21157, 106.98115], [-6.21157, 106.98115], [-6.22109, 106.98361], [-6.22109, 106.98361], [-6.22263, 106.98179], [-6.22215, 106.98039], [-6.22367, 106.98228], [-6.22367, 106.98228], [-6.26563, 106.99333], [-6.26705, 106.9933], [-6.30201, 107.00637], [-6.29869, 107.00855], [-6.30583, 107.00859], [-6.30614, 107.00784], [-6.30583, 107.00859], [-6.30583, 107.00859], [-6.31697, 107.0072], [-6.34966, 106.99749], [-6.34988, 106.99965], [-6.36899, 107.00921], [-6.37367, 107.00554], [-6.37367, 107.00554], [-6.37367, 107.00554], [-6.37261, 107.00486], [-6.37253, 107.00424], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37305, 107.00495], [-6.37225, 107.0041], [-6.37513, 107.00005], [-6.37315, 107.00425], [-6.3693, 107.00901], [-6.35832, 107.01718], [-6.29658, 107.021], [-6.30262, 107.0163], [-6.30591, 107.00851], [-6.31441, 107.00593], [-6.30697, 107.01017], [-6.30935, 107.0096], [-6.30548, 107.00811]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+    
+            poly_line_18310834f63c78bc464b51af7d60ad5d.bindTooltip(
+                `<div>
+                     Jalur lengkap (semua titik berurutan)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_174b2e81079097bd2b57d910167900b1.addTo(map_85863a2656b9f2423ce80abe8d09f1e5);
+        
+</script>
+</html>
+
+
+
+
+
+
+
+
+
